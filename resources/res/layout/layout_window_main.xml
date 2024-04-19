@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:xui="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.xiaopeng.autopilot.view.BgSurfaceView android:layout_width="match_parent" android:layout_height="match_parent"/>
+    <com.xiaopeng.autopilot.camera.view.CameraView android:id="@+id/container_camera" android:layout_width="@dimen/camera_window_width" android:layout_height="@dimen/camera_window_height" android:layout_alignParentTop="true"/>
+    <com.xiaopeng.autopilot.parking.view.ParkingViewContainer android:id="@+id/parking_view_container" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/container_camera" android:layout_alignParentBottom="true">
+        <com.xiaopeng.autopilot.parking.view.g3d.Parking3DViewGroup android:id="@+id/view_auto_parking" android:layout_width="match_parent" android:layout_height="match_parent"/>
+        <com.xiaopeng.autopilot.parking.view.ParkingView android:id="@+id/parking_2d_container" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    </com.xiaopeng.autopilot.parking.view.ParkingViewContainer>
+    <com.xiaopeng.autopilot.radar.view.ReversingView android:id="@+id/container_reversing" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/container_camera"/>
+    <View android:id="@+id/main_cover_view" android:background="@mipmap/bg_cover" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    <View android:id="@+id/slide_warning_layout" android:visibility="gone" android:layout_width="0dp" android:layout_height="0dp"/>
+    <com.xiaopeng.xui.widget.XImageView android:id="@+id/psn_srs_enable" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="28dp" android:layout_marginRight="31dp" android:src="@mipmap/airbag_on_day" android:scaleType="center" android:layout_alignParentTop="true" android:layout_alignParentRight="true"/>
+</RelativeLayout>

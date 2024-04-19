@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="380dp">
+    <com.xiaopeng.xui.widget.XTextView android:textSize="30sp" android:id="@+id/dialog_user_agreement_tv" android:scrollbars="none" android:layout_width="match_parent" android:layout_height="wrap_content" android:maxHeight="300dp" android:text="0.5 面向E28/D21 1.3版本 主要改动 1. 实现了字体缩放动态切换（默认关闭，业务方可开启） 2. 新增XDialogView控件，用于对话框样式的控件 3. 新增XDialogPure，只实现vui、xui主题的 纯净Dialog封装，无内置view 4. 对XDialog进行了重构，支持全屏，扩展一些方法，支持倒计时、关闭事件监听 5. widget包里的 XDatePickerDialog、XDialog、XLoadingDialog、XNumberPickerDialog、XOsd、XToast、XTimePickerDialog 标记为Deprecated，新的已经移至到app包 6. XListSingle、XListTwo新增序号功能 7. XRecyclerView封装vui相关方法 8. 整理删除合并了许多资源定义、规范了包名类名等、移除了废弃冗余的控件、方法等"/>
+    <LinearLayout android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="80dp" android:layout_marginLeft="-20dp">
+        <com.xiaopeng.xui.widget.XCheckBox android:id="@+id/dialog_user_agreement_cb" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <com.xiaopeng.xui.widget.XTextView android:textSize="30sp" android:id="@+id/dialog_user_agreement_cb_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="我已经阅读并同意隐私协议"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android" android:oneshot="true">
+    <item android:duration="34" android:drawable="@drawable/parking_b_auto_start_day_000"/>
+    <item android:duration="34" android:drawable="@drawable/parking_b_auto_start_day_001"/>
+    <item android:duration="34" android:drawable="@drawable/parking_b_auto_start_day_002"/>
+    <item android:duration="34" android:drawable="@drawable/parking_b_auto_start_day_003"/>
+    <item android:duration="34" android:drawable="@drawable/parking_b_auto_start_day_004"/>
+    <item android:duration="34" android:drawable="@drawable/parking_b_auto_start_day_005"/>
+    <item android:duration="34" android:drawable="@drawable/parking_b_auto_start_day_006"/>
+    <item android:duration="34" android:drawable="@drawable/parking_b_auto_start_day_007"/>
+    <item android:duration="34" android:drawable="@drawable/parking_b_auto_start_day_008"/>
+    <item android:duration="34" android:drawable="@drawable/parking_b_auto_start_day_009"/>
+    <item android:duration="34" android:drawable="@drawable/parking_b_auto_start_day_010"/>
+    <item android:duration="34" android:drawable="@drawable/parking_b_auto_start_day_011"/>
+    <item android:duration="34" android:drawable="@drawable/parking_b_auto_start_day_012"/>
+    <item android:duration="34" android:drawable="@drawable/parking_b_auto_start_day_013"/>
+    <item android:duration="34" android:drawable="@drawable/parking_b_auto_start_day_014"/>
+    <item android:duration="34" android:drawable="@drawable/parking_b_auto_start_day_015"/>
+    <item android:duration="34" android:drawable="@drawable/parking_b_auto_start_day_016"/>
+    <item android:duration="34" android:drawable="@drawable/parking_b_auto_start_day_017"/>
+    <item android:duration="34" android:drawable="@drawable/parking_b_auto_start_day_018"/>
+    <item android:duration="34" android:drawable="@drawable/parking_b_auto_start_day_019"/>
+    <item android:duration="34" android:drawable="@drawable/parking_b_auto_start_day_020"/>
+    <item android:duration="34" android:drawable="@drawable/parking_b_auto_start_day_021"/>
+    <item android:duration="34" android:drawable="@drawable/parking_b_auto_start_day_022"/>
+    <item android:duration="34" android:drawable="@drawable/parking_b_auto_start_day_023"/>
+</animation-list>

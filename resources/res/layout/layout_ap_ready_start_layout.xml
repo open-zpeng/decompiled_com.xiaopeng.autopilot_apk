@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/parking_ap_loading_layout" android:visibility="gone" android:clickable="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView android:id="@+id/parking_ap_loading_bg" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="80dp" android:layout_centerHorizontal="true"/>
+    <com.xiaopeng.xui.widget.XLoading android:id="@+id/parking_ap_loading" android:layout_marginTop="478dp" android:layout_centerHorizontal="true" style="@style/XLoading.Large"/>
+    <TextView android:textSize="44sp" android:id="@+id/parking_ap_loading_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="74dp" android:text="@string/text_ap_loading" android:layout_below="@+id/parking_ap_loading" android:layout_centerHorizontal="true"/>
+</RelativeLayout>

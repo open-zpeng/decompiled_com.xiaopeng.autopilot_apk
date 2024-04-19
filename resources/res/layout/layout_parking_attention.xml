@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:background="@color/x_dialog_window_bg_color_day" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:id="@+id/rl_main" android:layout_width="1000dp" android:layout_height="match_parent" android:layout_marginLeft="40dp" android:layout_marginTop="160dp" android:layout_marginRight="40dp" android:layout_marginBottom="160dp" android:layout_centerHorizontal="true">
+        <RelativeLayout android:id="@+id/rl_top" android:layout_width="match_parent" android:layout_height="112dp">
+            <com.xiaopeng.xui.widget.XImageButton android:id="@+id/btn_ok" android:visibility="visible" android:layout_width="72dp" android:layout_height="72dp" android:layout_margin="20dp" android:src="@drawable/x_ic_small_close" android:scaleType="center" style="@style/XButton.Icon.XSmall"/>
+            <TextView android:textSize="36sp" android:textColor="#ff0f1520" android:id="@+id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="50dp" android:text="@string/h5_parking_help" android:layout_centerHorizontal="true"/>
+        </RelativeLayout>
+        <WebView android:id="@+id/web" android:scrollbars="none" android:fadingEdge="none" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/rl_top" android:layout_centerHorizontal="true" android:overScrollMode="never"/>
+    </RelativeLayout>
+</RelativeLayout>

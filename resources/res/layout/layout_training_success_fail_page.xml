@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:clickable="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <View android:id="@+id/training_finish_page_right_bg" android:visibility="gone" android:layout_width="1250dp" android:layout_height="match_parent" android:layout_alignParentRight="true"/>
+    <RelativeLayout android:id="@+id/training_after_ap_finish_page_success_layout" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+        <TextView android:textSize="26sp" android:id="@+id/training_after_ap_finish_page_success_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="45dp" android:layout_marginTop="286dp" android:text="@string/training_after_ap_finish_success_left_title"/>
+        <ImageView android:id="@+id/training_after_ap_finish_page_success_img_1" android:layout_width="950dp" android:layout_height="224dp" android:layout_marginLeft="45dp" android:layout_marginTop="350dp"/>
+        <ImageView android:id="@+id/training_after_ap_finish_page_success_img_2" android:layout_width="950dp" android:layout_height="224dp" android:layout_marginLeft="45dp" android:layout_marginTop="599dp"/>
+        <ImageView android:id="@+id/training_after_ap_finish_page_success_img_3" android:layout_width="950dp" android:layout_height="224dp" android:layout_marginLeft="45dp" android:layout_marginTop="846dp"/>
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/training_ap_finish_btn_layout" android:layout_width="match_parent" android:layout_height="@dimen/x_pilot_3_top_view_height">
+        <com.xiaopeng.xui.widget.XImageButton android:id="@+id/training_finish_page_ib_close" android:layout_width="72dp" android:layout_height="72dp" android:layout_marginLeft="20dp" android:layout_marginTop="47dp" android:src="@drawable/x_ic_small_close" android:scaleType="center" android:layout_alignParentStart="true" style="@style/XButton.Icon.XSmall"/>
+        <com.xiaopeng.xui.widget.XButton android:textSize="30sp" android:gravity="center" android:id="@+id/training_finish_page_btn_control" android:background="@drawable/auto_btn_real_positive_selector" android:layout_width="216dp" android:layout_height="66dp" android:layout_marginLeft="127dp" android:layout_marginTop="51dp" android:text="@string/training_finish_success_btn"/>
+        <com.xiaopeng.xui.widget.XButton android:textSize="30sp" android:gravity="center" android:id="@+id/training_finish_page_btn_share" android:visibility="gone" android:layout_width="216dp" android:layout_height="66dp" android:layout_marginLeft="374dp" android:layout_marginTop="51dp" android:text="@string/memory_parking_share_dialog_title"/>
+    </RelativeLayout>
+    <ImageView android:id="@+id/training_finish_success_bg" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="960dp" android:layout_marginTop="-250dp"/>
+    <ImageView android:id="@+id/training_finish_success_light" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="960dp" android:layout_marginTop="-250dp"/>
+    <LinearLayout android:orientation="horizontal" android:id="@+id/ap_finish_ramp_feature_layout" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="112dp" android:layout_marginTop="1104dp" android:layout_centerHorizontal="true">
+        <RelativeLayout android:id="@+id/ramp_feature_distance_layout" android:layout_width="308.2969dp" android:layout_height="112dp">
+            <TextView android:textSize="26sp" android:id="@+id/ramp_feature_distance" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="33dp" android:layout_marginTop="62dp"/>
+        </RelativeLayout>
+        <RelativeLayout android:id="@+id/ramp_feature_speed_bump_layout" android:layout_width="308.2969dp" android:layout_height="112dp">
+            <TextView android:textSize="26sp" android:id="@+id/ramp_feature_speed_bump" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="68dp" android:layout_marginTop="62dp"/>
+        </RelativeLayout>
+        <RelativeLayout android:id="@+id/ramp_feature_ramp_layout" android:layout_width="308.2969dp" android:layout_height="112dp">
+            <TextView android:textSize="26sp" android:id="@+id/ramp_feature_ramp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="56dp" android:layout_marginTop="62dp"/>
+        </RelativeLayout>
+    </LinearLayout>
+    <RelativeLayout android:id="@+id/training_finish_page_success_layout" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="1104dp">
+        <RelativeLayout android:id="@+id/training_finish_page_success_distance_layout" android:layout_width="308.2969dp" android:layout_height="112dp" android:layout_marginLeft="226dp">
+            <TextView android:textSize="26sp" android:id="@+id/training_finish_page_success_distance" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="33dp" android:layout_marginTop="62dp"/>
+        </RelativeLayout>
+        <RelativeLayout android:id="@+id/training_finish_page_success_spd_num_layout" android:layout_width="308.2969dp" android:layout_height="112dp" android:layout_marginLeft="537dp">
+            <TextView android:textSize="26sp" android:id="@+id/training_finish_page_success_spd_num" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="53dp" android:layout_marginTop="62dp"/>
+        </RelativeLayout>
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/training_finish_page_fail_layout" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="123dp">
+        <com.xiaopeng.xui.widget.XTextView android:textSize="48sp" android:textStyle="bold" android:textColor="@color/x_theme_text_04" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="190dp" android:text="@string/training_finish_fail_hint"/>
+        <ImageView android:id="@+id/training_finish_page_fail_a_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="262dp"/>
+        <ImageView android:id="@+id/training_finish_page_fail_b_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="361dp"/>
+        <ImageView android:id="@+id/training_finish_page_fail_c_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="460dp"/>
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/training_finish_icon_layout" android:visibility="gone" android:layout_width="420dp" android:layout_height="420dp" android:layout_marginLeft="1319dp" android:layout_marginTop="@dimen/x_pilot_3_training_finish_page_icon_top_margin">
+        <ImageView android:id="@+id/training_finish_page_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true"/>
+    </RelativeLayout>
+    <TextView android:textSize="42sp" android:textColor="@color/training_finish_title_color" android:id="@+id/training_finish_page_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="56dp" android:layout_marginTop="225dp" android:text="@string/training_finish_success_title"/>
+    <com.xiaopeng.xui.widget.XTextView android:textSize="24dp" android:textColor="@color/training_finish_subtitle_color" android:id="@+id/training_finish_page_subtitle" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="127dp" android:layout_marginTop="16.6dp" android:text="@string/training_finish_sub_title" android:layout_below="@+id/training_finish_page_title"/>
+</RelativeLayout>

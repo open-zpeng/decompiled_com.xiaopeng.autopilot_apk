@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:clickable="false" android:layout_width="match_parent" android:layout_height="match_parent">
+    <View android:id="@+id/ap_finish_page_top_bg" android:layout_width="match_parent" android:layout_height="@dimen/x_pilot_3_top_view_height"/>
+    <View android:id="@+id/ap_finish_page_right_bg" android:visibility="gone" android:layout_width="1250dp" android:layout_height="match_parent" android:layout_alignParentRight="true"/>
+    <com.xiaopeng.xui.widget.XImageButton android:id="@+id/ap_finish_page_close" android:layout_width="72dp" android:layout_height="72dp" android:layout_marginLeft="20dp" android:layout_marginTop="47dp" android:src="@drawable/x_ic_small_close" android:scaleType="center" style="@style/XButton.Icon.XSmall"/>
+    <com.xiaopeng.xui.widget.XButton android:textSize="26sp" android:gravity="center" android:id="@+id/ap_finish_btn_control" android:background="@drawable/auto_btn_real_positive_selector" android:layout_width="216dp" android:layout_height="66dp" android:layout_marginLeft="41dp" android:layout_marginTop="51dp" android:text="@string/training_finish_or_cancal_confirm" android:layout_toRightOf="@+id/ap_finish_page_close"/>
+    <com.xiaopeng.xui.widget.XButton android:textSize="30sp" android:gravity="center" android:id="@+id/ap_finish_btn_learn" android:visibility="gone" android:layout_width="216dp" android:layout_height="66dp" android:layout_marginLeft="32dp" android:layout_marginTop="51dp" android:text="@string/ap_finish_page_learn_btn_text" android:layout_toRightOf="@+id/ap_finish_btn_control"/>
+    <com.xiaopeng.xui.widget.XButton android:textSize="30sp" android:gravity="center" android:id="@+id/ap_finish_comment_btn" android:background="@drawable/auto_btn_real_positive_selector" android:visibility="gone" android:layout_width="216dp" android:layout_height="66dp" android:layout_marginLeft="374dp" android:layout_marginTop="47dp" android:text="@string/dialog_comment_title"/>
+    <com.xiaopeng.xui.widget.XButton android:textSize="30sp" android:gravity="center" android:id="@+id/ap_finish_share_btn" android:background="@drawable/auto_btn_real_positive_selector" android:visibility="gone" android:layout_width="216dp" android:layout_height="66dp" android:layout_marginLeft="127dp" android:layout_marginTop="47dp" android:text="@string/memory_parking_share_dialog_title"/>
+    <ImageView android:id="@+id/ap_finish_page_light_bg" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="940dp" android:layout_marginTop="-250dp"/>
+    <ImageView android:id="@+id/ap_finish_page_light" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="940dp" android:layout_marginTop="-250dp"/>
+    <RelativeLayout android:id="@+id/ap_finish_icon_layout" android:visibility="gone" android:layout_width="420dp" android:layout_height="420dp" android:layout_marginLeft="1301dp" android:layout_marginTop="@dimen/x_pilot_3_ap_finish_icon_top_margin">
+        <ImageView android:id="@+id/ap_finish_page_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true"/>
+    </RelativeLayout>
+    <TextView android:textSize="48sp" android:textColor="@color/tv_parking_attention_title_day" android:id="@+id/ap_finish_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="127dp" android:layout_marginTop="190dp" android:text="@string/ap_finish_title_text"/>
+    <RelativeLayout android:id="@+id/ap_finish_page_success_distance_layout" android:layout_width="308.2969dp" android:layout_height="112dp" android:layout_marginLeft="76dp" android:layout_marginTop="1104dp">
+        <TextView android:textSize="26sp" android:id="@+id/ap_finish_page_success_distance" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="33dp" android:layout_marginTop="62dp"/>
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/ap_finish_page_success_round_people_layout" android:layout_width="308.2969dp" android:layout_height="112dp" android:layout_marginLeft="387dp" android:layout_marginTop="1104dp">
+        <TextView android:textSize="26sp" android:id="@+id/ap_finish_page_round_people" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="68dp" android:layout_marginTop="62dp"/>
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/ap_finish_page_success_passing_car_layout" android:layout_width="308.2969dp" android:layout_height="112dp" android:layout_marginLeft="697dp" android:layout_marginTop="1104dp">
+        <TextView android:textSize="26sp" android:id="@+id/ap_finish_page_success_passing_car" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="53dp" android:layout_marginTop="62dp"/>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView android:id="@+id/parking_ap_xpu_cancel_l" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentTop="true"/>
+    <ImageView android:id="@+id/parking_ap_xpu_cancel_r" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true"/>
+    <ImageView android:id="@+id/parking_ap_xpu_cancel_steer" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="300dp" android:layout_centerHorizontal="true"/>
+    <com.xiaopeng.xui.widget.XTextView android:textSize="28dp" android:textColor="@color/x_theme_text_01" android:id="@+id/hint" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="650dp" android:layout_centerHorizontal="true"/>
+</RelativeLayout>

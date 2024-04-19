@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="680dp" android:layout_height="760dp">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="160dp">
+        <com.xiaopeng.xui.widget.XImageButton android:id="@+id/dialog_share_title_bt_close" android:layout_width="72dp" android:layout_height="72dp" android:layout_marginLeft="14dp" android:layout_marginTop="14dp" android:src="@drawable/x_ic_small_close" android:scaleType="center" style="@style/XButton.Icon.XSmall"/>
+        <com.xiaopeng.xui.widget.XTextView android:textSize="36sp" android:textColor="#0f1520" android:gravity="center_horizontal" android:id="@+id/dialog_share_title_tv" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="32dp"/>
+    </RelativeLayout>
+    <com.xiaopeng.xui.widget.XTextView android:textSize="26sp" android:gravity="center_horizontal" android:id="@+id/dialog_comment_tv1" android:scrollbars="none" android:layout_width="match_parent" android:layout_height="42dp" android:text="@string/dialog_comment_tv1_text"/>
+    <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="77dp">
+        <com.xiaopeng.xui.widget.XButton android:textSize="35sp" android:gravity="center" android:id="@+id/dialog_comment_positive_btn" android:layout_width="234dp" android:layout_height="202dp"/>
+        <com.xiaopeng.xui.widget.XButton android:textSize="35sp" android:gravity="center" android:id="@+id/dialog_comment_negative_btn" android:layout_width="234dp" android:layout_height="202dp" android:layout_marginLeft="40dp"/>
+    </LinearLayout>
+    <com.xiaopeng.xui.widget.XTextView android:textSize="26sp" android:id="@+id/dialog_comment_tv2" android:scrollbars="none" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="128dp" android:layout_marginTop="85dp" android:maxHeight="300dp" android:text="@string/dialog_comment_tv2_text"/>
+    <com.xiaopeng.xui.widget.XTextView android:textSize="30sp" android:id="@+id/dialog_comment_tv3" android:visibility="gone" android:scrollbars="none" android:layout_width="match_parent" android:layout_height="wrap_content" android:maxHeight="300dp" android:text="@string/dialog_comment_tv3_text"/>
+</LinearLayout>

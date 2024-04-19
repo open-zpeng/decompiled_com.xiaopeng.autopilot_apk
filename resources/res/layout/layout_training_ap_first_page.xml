@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:clickable="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <View android:id="@+id/training_ap_first_page_top_bg" android:layout_width="match_parent" android:layout_height="@dimen/x_pilot_3_top_view_height"/>
+    <View android:id="@+id/training_ap_first_page_right_bg" android:visibility="gone" android:layout_width="1250dp" android:layout_height="match_parent" android:layout_alignParentRight="true"/>
+    <com.xiaopeng.xui.widget.XImageButton android:id="@+id/training_ap_first_page_close" android:layout_width="72dp" android:layout_height="72dp" android:layout_marginLeft="20dp" android:layout_marginTop="47dp" android:src="@drawable/x_ic_small_back" android:scaleType="center" style="@style/XButton.Icon.XSmall"/>
+    <TextView android:textSize="42sp" android:textColor="@color/tv_parking_attention_title_day" android:id="@+id/training_ap_first_page_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="91dp" android:layout_marginTop="192dp" android:text="@string/training_ap_first_page_title"/>
+    <TextView android:textSize="24sp" android:textColor="#5c000000" android:id="@+id/training_ap_first_page_message" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="91dp" android:layout_marginTop="18dp" android:text="@string/training_ap_first_page_message" android:layout_below="@+id/training_ap_first_page_title"/>
+    <com.xiaopeng.xui.widget.XButton android:textSize="30sp" android:gravity="center" android:id="@+id/training_ap_first_page_btn_control" android:background="@drawable/auto_btn_real_positive_selector" android:layout_width="266dp" android:layout_height="66dp" android:layout_marginTop="47dp" android:text="@string/training_ap_first_page_btn_control" android:layout_marginStart="258dp"/>
+    <com.xiaopeng.xui.widget.XButton android:textSize="30sp" android:gravity="center" android:id="@+id/training_ap_first_page_btn_learn" android:layout_width="266dp" android:layout_height="66dp" android:layout_marginLeft="32dp" android:layout_marginTop="47dp" android:text="@string/training_ap_first_page_btn_learn" android:layout_toRightOf="@+id/training_ap_first_page_btn_control"/>
+    <View android:id="@+id/training_ap_first_data_board_bg_view" android:background="@mipmap/ic_training_ap_first_data_board_bg" android:layout_width="902dp" android:layout_height="198dp" android:layout_marginLeft="89dp" android:layout_marginTop="1038dp"/>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/training_ap_first_distance_layout" android:layout_width="360dp" android:layout_height="198dp" android:layout_marginLeft="360dp" android:layout_marginTop="1038dp">
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:id="@+id/training_ap_first_distance_icon" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <TextView android:textSize="26sp" android:id="@+id/training_ap_first_distance_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="25dp" android:text="@string/training_ap_first_distance_title"/>
+        </LinearLayout>
+        <RelativeLayout android:gravity="center" android:id="@+id/training_ap_first_distance_progress_layout" android:layout_width="85dp" android:layout_height="match_parent" android:layout_marginLeft="10dp" android:layout_marginTop="20dp">
+            <TextView android:textSize="52sp" android:id="@+id/training_ap_first_distance" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textAlignment="textEnd"/>
+            <com.xiaopeng.xui.widget.XProgressBar android:id="@+id/training_ap_first_distance_progress" android:visibility="gone" android:layout_width="56dp" android:layout_height="56dp" android:indeterminateDuration="1200" style="@style/XProgressBar.Circular.Large"/>
+        </RelativeLayout>
+        <TextView android:textSize="26sp" android:id="@+id/training_ap_first_distance_unit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginTop="30dp" android:text="@string/tts_xpilot_3_remain_distance_m"/>
+    </LinearLayout>
+    <View android:id="@+id/training_ap_first_time_divider" android:background="@mipmap/ic_training_ap_first_shuxian_day" android:layout_width="3dp" android:layout_height="40dp" android:layout_marginLeft="721dp" android:layout_marginTop="1143dp"/>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/training_ap_first_time_layout" android:layout_width="265dp" android:layout_height="198dp" android:layout_marginLeft="760dp" android:layout_marginTop="1038dp">
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:id="@+id/training_ap_first_time_icon" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <TextView android:textSize="26sp" android:id="@+id/training_ap_first_time_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="25dp" android:text="@string/training_ap_first_time_title"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:id="@+id/training_ap_first_time_progress_layout" android:layout_width="85dp" android:layout_height="match_parent" android:layout_marginLeft="10dp" android:layout_marginTop="20dp">
+            <TextView android:textSize="52sp" android:id="@+id/training_ap_first_time" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <com.xiaopeng.xui.widget.XProgressBar android:id="@+id/training_ap_first_time_progress" android:visibility="gone" android:layout_width="56dp" android:layout_height="56dp" android:indeterminateDuration="1200" style="@style/XProgressBar.Circular.Large"/>
+        </LinearLayout>
+        <TextView android:textSize="26sp" android:id="@+id/training_ap_first_time_unit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginTop="30dp" android:text="@string/tts_xpilot_3_remain_time_minute"/>
+    </LinearLayout>
+    <View android:id="@+id/training_ap_first_map_layout" android:background="@mipmap/ic_training_ap_first_data_bg" android:layout_width="206dp" android:layout_height="171dp" android:layout_marginLeft="107dp" android:layout_marginTop="1051dp"/>
+    <com.xiaopeng.autopilot.parking.view.MiniMapView android:id="@+id/parking_mini_map" android:layout_width="210dp" android:layout_height="210dp" android:layout_marginLeft="107dp" android:layout_marginTop="1034dp"/>
+    <com.xiaopeng.xui.widget.XProgressBar android:id="@+id/training_ap_mini_map_progress" android:layout_width="56dp" android:layout_height="56dp" android:layout_marginLeft="182dp" android:layout_marginTop="1108dp" android:indeterminateDuration="1200" style="@style/XProgressBar.Circular.Large"/>
+</RelativeLayout>

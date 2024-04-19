@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:clickable="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.xiaopeng.xui.widget.XImageButton android:id="@+id/training_first_page_close" android:layout_width="80dp" android:layout_height="80dp" android:layout_marginLeft="40dp" android:layout_marginTop="60dp" android:src="@drawable/x_ic_small_back" android:scaleType="center" style="@style/XButton.Icon.XSmall"/>
+    <TextView android:textSize="48sp" android:textColor="@color/tv_parking_attention_title_day" android:id="@+id/training_first_page_title" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="846dp" android:layout_marginTop="68dp" android:text="@string/training_first_page_title_text"/>
+    <com.xiaopeng.xui.widget.XButton android:textSize="33sp" android:textColor="#f2f3f5" android:gravity="center" android:id="@+id/training_first_page_btn_control" android:background="@drawable/auto_btn_real_positive_selector" android:layout_width="468dp" android:layout_height="80dp" android:layout_marginLeft="168dp" android:layout_marginTop="60dp" android:text="@string/training_first_page_start"/>
+</RelativeLayout>

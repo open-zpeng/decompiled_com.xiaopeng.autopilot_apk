@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android"> //set background 
+    <item android:id="@android:id/background">
+        <shape>
+            <corners android:radius="5dp"/>
+        </shape>
+        <color android:color="@color/parking_progress_bar_bg_color_day"/>
+    </item> // set progress 
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape>
+                <gradient android:startColor="#170298ff" android:endColor="#0298ff" android:type="linear"/>
+            </shape>
+        </clip>
+    </item>
+</layer-list>

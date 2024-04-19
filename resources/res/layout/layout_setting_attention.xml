@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <com.xiaopeng.xui.widget.XImageButton android:id="@+id/pro_view_parking_attention" android:layout_width="72dp" android:layout_height="72dp" android:layout_marginTop="44dp" android:src="@drawable/ic_mid_attention" android:scaleType="center" android:layout_marginEnd="20dp" android:layout_alignParentEnd="true" style="@style/XButton.Icon.XSmall"/>
+    <com.xiaopeng.xui.widget.XImageButton android:id="@+id/pro_view_parking_settings" android:layout_width="72dp" android:layout_height="72dp" android:layout_marginTop="44dp" android:src="@drawable/ic_mid_settings" android:scaleType="center" android:layout_toLeftOf="@+id/pro_view_parking_attention" android:layout_alignWithParentIfMissing="true" android:layout_marginEnd="20dp" style="@style/XButton.Icon.XSmall"/>
+</RelativeLayout>

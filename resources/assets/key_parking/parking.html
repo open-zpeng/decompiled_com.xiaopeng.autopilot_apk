@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html class="fullScreen">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>XPILOT</title>
+  <style type="text/css">
+    body,
+a,
+div,
+p,
+button,
+span,
+img,
+ul,
+li {
+  font-family: sans-serif;
+
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+  text-decoration: none;
+
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+}
+
+a {
+  display: block;
+}
+
+textarea,
+input[type='range'],
+input,
+input:matches([type='password'], [type='search']) {
+  border: none;
+  border: 0 solid #fff;
+  border-radius: 0;
+  outline: none;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  border: none;
+  border-width: 1px;
+  background-color: transparent;
+}
+
+*:focus {
+  outline: none;
+}
+
+html.fullScreen, body.fullScreen {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+    #app {
+  width: 100%;
+  height: 100%;
+  font-family: xpeng-fonts-medium;
+}
+
+#app.hideLeftBar {
+  padding-left: 0;
+}
+
+.rightContentImage {
+  width: 100%;
+  /* min-height: 274px; */
+  display: block;
+  position: relative;
+  border-radius: 16px;
+  margin: 20px auto;
+}
+
+.dayThemeRightContentImage {
+  display: block;
+}
+.nightTheme .dayThemeRightContentImage {
+  display: none;
+}
+
+.nightThemeRightContentImage {
+  display: none;
+}
+.nightTheme .nightThemeRightContentImage {
+  display: block;
+}
+
+.rightContentImage.oldG3 {
+  display: none;
+}
+
+.rightContentImage.newG3 {
+  display: none;
+}
+
+.rightContentImage.p7 {
+  display: none;
+}
+
+.oldG3App .rightContentImage.oldG3 {
+  display: block;
+}
+
+.newG3App .rightContentImage.newG3 {
+  display: block;
+}
+
+.p7App .rightContentImage.p7 {
+  display: block;
+}
+
+.rightContentShortImage {
+  width: 100%;
+  display: block;
+  border-radius: 16px;
+  margin: 20px auto;
+}
+
+.rightContentAnimation {
+  width: 100%;
+  height: 433px;
+  position: relative;
+  overflow: hidden;
+  margin: 20px auto;
+  border-radius: 16px;
+  background-repeat: no-repeat;
+}
+
+.rightContentImageCover {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.nightTheme .rightContentImageCover {
+  display: block;
+}
+
+.rightContentVideoWrap {
+  width: 100%;
+  height: 410px;
+  display: block;
+  position: relative;
+}
+
+.hideLeftBar .rightContentVideoWrap {
+  width: 100%;
+}
+
+.rightContentVideo {
+  width: 100%;
+  height: 100%;
+}
+
+.videoPlayButton {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  background-image: url('image/video-play-button.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto auto;
+  display: none;
+}
+
+.stop .videoPlayButton {
+  display: flex;
+}
+
+.textContent {
+  width: 100%;
+  color: #0F1520;
+  font-size: 26px;
+  line-height: 47px;
+  opacity: 0.86;
+}
+
+.nightTheme .textContent {
+  color: #2B3547;
+  opacity: 0.56;
+}
+
+.newG3App .textContent {
+  font-size: 22px;
+  line-height: 36px;
+}
+
+.textContent .learnMoreText {
+  color: #32ADEA;
+  width: auto;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-left: -20px;
+  margin-top: -20px;
+  margin-bottom: -20px;
+}
+
+.nightTheme .textContent {
+  color: #6D7592;
+}
+
+.nightTheme .textContent.learnMoreText {
+  color: #2DC4FD;
+}
+
+.fontScaled .textContent {
+  font-size: 18.18px;
+}
+
+
+.textIcon {
+  height: 24px;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.textTitle {
+  width: 100%;
+  color: #0F1520;
+  font-size: 24px;
+  line-height: 30px;
+  margin-bottom: 24px;
+}
+
+.subTitle {
+  line-height: 43px;
+  letter-spacing: 0.6px;
+  font-weight: bold;
+  margin-bottom: 11px;
+  font-size: 26px;
+  color: #0F1520;
+  opacity: 0.86;
+}
+
+.d21bSubTitle {
+  margin-top: 11px;
+} 
+
+.nightTheme .subTitle {
+    color: #2B3547;
+}
+
+.newG3App .subTitle {
+  font-size: 22px;
+  line-height: 36px;
+}
+
+.nightTheme .subTitle {
+  color: #9DA4BE;
+}
+
+.fontScaled .textTitle {
+  font-size: 21.8px;
+}
+
+.nightTheme .textTitle {
+  color: #9DA4BE;
+  font-weight: bold;
+}
+
+.textContentCutLine {
+  font-size: 34px;
+  line-height: 34px;
+}
+
+.imgBottomCutLine {
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.blueText {
+  color: #32ADEA;
+}
+
+.nightTheme .blueText {
+  color: #2DC4FD;
+}
+
+.leftBar {
+  float: left;
+  width: 200px;
+  height: 100%;
+  /* border-right: 1px solid rgba(0, 0, 0, 0.06); */
+  z-index: 999;
+  /* background-color: rgba(0, 0, 0, 0.048); */
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: block;
+}
+
+.p7App .leftBar {
+  width: 380px;
+}
+
+.leftBar::-webkit-scrollbar {
+  display: none;
+}
+
+.nightTheme .leftBar {
+  /* background-color: rgba(0, 0, 0, 0.12); */
+}
+
+.hideLeftBar .leftBar {
+  display: none;
+}
+
+.leftBarItem {
+  position: relative;
+  /* width: 805px; */
+  height: 116px;
+  background-color: transparent;
+  padding-left: 80px;
+  padding-right: 28px;
+  font-size: 30px;
+  line-height: 116px;
+  display: none;
+  color: rgba(15,21,32,0.76);
+}
+
+.newG3App .leftBarItem{
+  padding-left: 40px;
+  color: #0F1520;
+  opacity: 0.86;
+}
+
+.nightTheme .leftBarItem {
+  color: rgba(117,125,141,0.86);
+}
+
+.newG3App .leftBarItem {
+  height: 100px;
+  font-size: 22px;
+  line-height: 100px;
+}
+
+.fontScaled .leftBarItem {
+  font-size: 30px;
+}
+
+.leftBarItem.show {
+  display: block;
+}
+
+.leftBarItem.active {
+  background: -webkit-linear-gradient(left, white 0%, rgba(255,255,255,0) 100%);
+  color: #1683F9;
+}
+
+.leftBarItem.active span::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 22px;
+  bottom: 22px;
+  width: 6px;
+  background-image: linear-gradient(270deg, #1683F9 0%, #1683F9 100%);
+  box-shadow: 0 0 6px 0 #1683F9;
+  border-radius: 3px;
+  border-radius: 3px;
+}
+
+.nightTheme .leftBarItem.active {
+  color: #1683F9;
+  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.16) 0%, rgba(0,0,0,0) 100%);
+}
+
+.rightContentWrap {
+  padding-left: 30px;
+  padding-right: 40px;
+  /* width: 730px; */
+  margin-right: 50px;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  display: block;
+  /* min-height: 1200px; */
+  /* background-color: #0298FF; */
+}
+
+.newG3App .rightContentWrap {
+  margin-right: 0px;
+}
+
+.xpilot .xpilotRightContentWrap {
+  /* min-height: 1200px; */
+}
+
+.smart .smartRightContentWrap {
+  min-height: 400px;
+}
+
+.rightContentWrap::-webkit-scrollbar {
+  display: none;
+}
+
+.rightContent {
+  width: 100%;
+  display: none;
+  position: relative;
+  padding-bottom: 150px;
+  /* min-height: 1200px; */
+}
+
+.activeRightContent {
+  display: block;
+}
+
+.hideLeftBar .rightContentWrap {
+  width: 100%;
+  padding-left: 135px;
+  padding-right: 135px;
+}
+
+    html {
+      -webkit-tap-highlight-color: transparent;
+    }
+  </style>
+</head>
+<body class="fullScreen">
+  <script type="text/javascript">
+    var windowWidth = document.body.clientWidth;
+    var fontSize = windowWidth / 10;
+    // 设置html font-size 的样式
+    var style = document.createElement('style');
+    style.type = 'text/css';
+    style.innerHTML = 'html { font-size: '+ fontSize +'px !important;}';
+    document.head.appendChild(style);
+  </script>
+  <div id="app">
+    
+    
+<div class="leftBar">
+  
+    <div class="leftBarItem leftBarItem_0" data-index="0"><span>智能辅助泊车</span></div>
+  
+    <div class="leftBarItem leftBarItem_1" data-index="1"><span>影像保持</span></div>
+  
+</div>
+<script type="text/javascript">
+var leftBarItemTitleArray = [
+  '智能辅助泊车','影像保持',
+];
+var showIndexArray = [
+  0,1,
+];
+// 点击左侧侧边栏事件
+function onLeftBarItemTouchStart(event) {
+  window.setActiveIndex(parseInt(event.currentTarget.getAttribute('data-index'), 10) || 0);
+  event.preventDefault();
+  event.stopPropagation();
+}
+
+window.initLeftBar = function() {
+  for (var i = 0; i < showIndexArray.length; i += 1) {
+    var leftBarItem = document.querySelector('.leftBar').querySelector('.leftBarItem_' + showIndexArray[i]);
+    if (leftBarItem) {
+      leftBarItem.classList.add('show');
+      leftBarItem.addEventListener('touchstart', onLeftBarItemTouchStart);
+    }
+  }
+}
+</script>
+
+    <div class="rightContentWrap">
+      
+        
+<div class="rightContent rightContent_1">
+  <p class="textContentCutLine">&nbsp;</p>
+  <p class="textContent">该功能可以辅助驾驶员将车辆泊入车位，具体操作方法如下：</p>
+  <p class="textContentCutLine">&nbsp;</p>
+  <p class="subTitle">1、如何激活智能辅助泊车模式？</p>
+  <p class="textContent">智能辅助泊车功能可以通过以下方式启动：</p>
+  <p class="textContent">① 点击大屏导航栏的超级泊车图标 <img src="image/ic_mid_lights_d21b.png">；</p>
+  <p class="textContent">② 让小P帮你启动。说出“你好，小P”即可呼唤小P，然后对小P说“我要泊车”；</p>
+  <p class="textContent">③ 仪表显示车位图标 <img src="image/ic_slot.png"> 后，停车挂入R挡；</p>
+  <p class="textContent">④ 按下方向盘左侧自定义按钮；</p>
+  
+  <div class="rightContentImageWrap">
+    <div style="position: relative;" class="dayThemeRightContentImage">
+      <div class="rightContentImageCover"></div>
+      <img src="image/right-content-d21b-1-1.png" class="rightContentImage">
+    </div>
+    <div style="position: relative;" class="nightThemeRightContentImage">
+      <div class="rightContentImageCover"></div>
+      <img src="image/right-content-d21b-1-1 night.png" class="rightContentImage">
+    </div>
+  </div>
+  
+
+
+  <p class="textContentCutLine">&nbsp;</p>
+  <p class="subTitle">2、如何有效寻找车位？</p>
+  <p class="textContent">保持车辆在靠近车位的一侧道路向前行驶，找到车位时会有以下提示：</p>
+  <p class="textContent">① 提示音或人声提示；</p>
+  <p class="textContent">② 仪表有车位图标 <img src="image/ic_slot.png"> 显示；</p>
+  <p class="textContent">③ 触摸屏显示可泊车位；</p>
+  <!--
+  <div style="position: relative;">
+    <div class="rightContentImageCover"></div>
+    <img src="image/right-content-1-2.png" class="rightContentImage">
+  </div>
+-->
+  <p class="textContentCutLine">&nbsp;</p>
+  <p class="subTitle">3、开始智能辅助泊车前的准备</p>
+  <p class="subTitle">① 保持车辆驻车</p>
+  <p class="textContent">由于尚未开始智能辅助泊车，此时仍然需要驾驶员控制车辆，若驾驶员没有制动或采取其他驻车措施，车辆会怠速溜车，容易造成刮碰、碰撞事故。</p>
+  <p class="subTitle d21bSubTitle">② 确认车位环境</p>
+  <p class="textContent">智能辅助泊车功能对车位的感知能力还无法达到人类驾驶员的水平，为了确保泊车安全，在智能辅助泊车开始前确认车位的环境是很有必要的。</p>
+<p class="textContentCutLine">&nbsp;</p>
+  <p class="subTitle">4、如何开始智能辅助泊车？</p>
+  <p class="textContent">① 点击触摸屏的开始按钮。</p>
+  <p class="textContent">② 确认开始按钮有效后，才能松开刹车，看到触摸屏提示“泊车中”，意味着开始按钮是有效的，否则需要再次点击开始按钮，以确保智能辅助泊车功能激活。</p>
+  
+  <div class="rightContentImageWrap">
+    <div style="position: relative;" class="dayThemeRightContentImage">
+      <div class="rightContentImageCover"></div>
+      <img src="image/right-content-d21b-1-3.png" class="rightContentImage">
+    </div>
+    <div style="position: relative;" class="nightThemeRightContentImage">
+      <div class="rightContentImageCover"></div>
+      <img src="image/right-content-d21b-1-3 night.png" class="rightContentImage">
+    </div>
+  </div>
+  
+
+  <p class="textContentCutLine">&nbsp;</p>
+  <p class="subTitle">5、紧急情况如何停止智能辅助泊车</p>
+  <p class="textContent">① 踩下制动踏板。</p>
+  <p class="textContent">② 点击继续可以恢复，点击“退出”可以退出智能辅助泊车。</p>
+  
+  <div class="rightContentImageWrap">
+    <div style="position: relative;" class="dayThemeRightContentImage">
+      <div class="rightContentImageCover"></div>
+      <img src="image/right-content-d21b-1-4.png" class="rightContentImage">
+    </div>
+    <div style="position: relative;" class="nightThemeRightContentImage">
+      <div class="rightContentImageCover"></div>
+      <img src="image/right-content-d21b-1-4 night.png" class="rightContentImage">
+    </div>
+  </div>
+  
+
+</div>
+      
+        
+
+
+<div class="rightContent rightContent_2">
+  <p class="textContentCutLine">&nbsp;</p>
+  <p class="subTitle">什么是影像保持？</p>
+
+  <p class="textContent">影像保持设置项开启后，车辆挡位在R挡和D挡之间连续切换时，倒车影像可以始终显示，以便驾驶员在这个过程中始终可以通过倒车影像来观察周围环境。</p>
+  <p class="textContent">影像保持会在D挡下，车速超过10km/h后退出，当驾驶员不需要在D挡下观察倒车影像时，也可以通过关闭按键退出倒车影像。</p>
+  <p class="textContent" id="lowId"></p>
+
+  <div class="rightContentImageWrap">
+    <div style="position: relative;" class="dayThemeRightContentImage">
+      <div class="rightContentImageCover"></div>
+      <img src="image/right-content-2-1-d21b.png" class="rightContentImage" id="ReversingImageId">
+    </div>
+    <div style="position: relative;" class="nightThemeRightContentImage">
+      <div class="rightContentImageCover"></div>
+      <img src="image/right-content-2-1-d21b night.png" class="rightContentImage" id="NightReversingImageId">
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
+  <script type="text/javascript">
+  var params = window.location.search.substr(1).split('&');
+  var data = {};
+  for (var i = 0; i < params.length; i += 1) {
+    var cur = params[i];
+    var key = cur.split('=')[0];
+    var value = cur.split('=')[1];
+    data[key] = value
+  }
+  window.locationSearchParams = data;
+  // 获取 location.search 的参数
+  window.getLocationSearchDataByKey = function(key) {
+    return window.locationSearchParams[key];
+  }
+  // 根据当前主题获取 rightContentWrap 元素，用于查询指定主题的右侧内容区
+  function getRightContentWrap() {
+    return document.querySelector('.rightContentWrap');
+  }
+
+  function initLowD20(carType) {
+    if (['A1', 'A2', 'A3'].indexOf(carType) > -1) {
+        var leftBar_hind_0 = document.querySelector('.leftBar').querySelector('.leftBarItem_0');
+        var leftBar_hind_1 = document.querySelector('.leftBar').querySelector('.leftBarItem_1');
+        var leftBar_hind_2 = document.querySelector('.leftBar').querySelector('.leftBarItem_2');
+        if (leftBar_hind_0) {
+          leftBar_hind_0.classList.remove('show');
+          leftBar_hind_0.classList.add('hind');
+        }
+        if (leftBar_hind_1) {
+          leftBar_hind_1.classList.remove('show');
+          leftBar_hind_1.classList.add('hind');
+        }
+        setLeftBarItemActiveByIndex(2);
+        showRightContentByActiveIndex(2);
+      }
+  }
+
+  function initOther(carType) {
+    if (['Q1', 'Q2', 'Q3', 'Q3A'].indexOf(carType) > -1) {
+        var leftBar_hind_0 = document.querySelector('.leftBar').querySelector('.leftBarItem_0');
+        var leftBar_hind_1 = document.querySelector('.leftBar').querySelector('.leftBarItem_1');
+        if (leftBar_hind_0) {
+          leftBar_hind_0.classList.remove('show');
+          leftBar_hind_0.classList.add('hind');
+        }
+        setLeftBarItemActiveByIndex(1);
+        showRightContentByActiveIndex(1);
+      }
+  }
+
+  //根据参数修改低配车型布局
+  window.initLow = function initLow() {
+    var configCode = window.locationSearchParams["configCode"];
+    var carType = window.locationSearchParams["carType"];
+    // 低配车型展示文案
+    if (configCode === '1') {
+      var testdiv=document.getElementById("lowId");
+      if (testdiv) testdiv.innerHTML="<p>通过点击导航栏的 " + "<img src='image/ic_dock.png'>" + " 图标也可以进入倒车影像，同样具备影像保持的效果。</p>";
+      if(carType) {
+        initLowD20(carType);
+        initOther(carType);
+      }
+    }
+  }
+
+  // 初始化页面、昼夜切换响应函数
+  window.onThemeChange = function onThemeChange(theme) {
+    var appDiv = document.querySelector('#app');
+    var classList = [];
+    if (Math.round(theme) == 2) {
+      classList.push('nightTheme');
+    } else {
+      classList.push('dayTheme');
+    }
+    // if (window.getLocationSearchDataByKey('hideLeftBar') === 'true') {
+    //  classList.push('hideLeftBar');
+    // }
+    if (Number(window.fontScale).toFixed(1) === '1.1') {
+      classList.push('fontScaled');
+    }
+    // 车型参数
+    var carSymbolPool = {
+      D20: 'A1',
+      D20P: 'A2',
+      D21A: 'A3',
+      E28: 'Q1',
+      D21B: 'Q2',
+      D55: 'Q3',
+      D55A: 'Q3A'
+    };
+    var carSymbol = window.getLocationSearchDataByKey('carType') || 'A1';
+    var mapCarSymbolFunction = function mapCarSymbolFunction(key) {
+      return carSymbolPool[key];
+    };
+    if (['D20'].map(mapCarSymbolFunction).indexOf(carSymbol) > -1) {
+      classList.push('oldG3App');
+    } else if (['D20P', 'D21A', 'D21B','D55','D55A'].map(mapCarSymbolFunction).indexOf(carSymbol) > -1) {
+      classList.push('newG3App');
+    } else if(['E28'].map(mapCarSymbolFunction).indexOf(carSymbol) > -1) {
+      classList.push('p7App')
+    }
+    appDiv.className = classList.join(' ');
+
+    if (['D55A'].map(mapCarSymbolFunction).indexOf(carSymbol) > -1) {
+      var reversingdiv=document.getElementById("ReversingImageId");
+      var nightReversingdiv=document.getElementById("NightReversingImageId");
+      reversingdiv.src="image/right-content-2-1-d55a.png";
+      nightReversingdiv.src="image/right-content-2-1-d55a-night.png"
+    }
+
+  }
+
+  function setLeftBarItemActiveByIndex(index) {
+    var activeLeftBarItem = document.querySelector('.leftBar').querySelector('.active.leftBarItem');
+    var shouldActiveLeftBarItem = document.querySelector('.leftBar').querySelector('.leftBarItem_' + index);
+    if (activeLeftBarItem === shouldActiveLeftBarItem) return;
+    if (activeLeftBarItem) activeLeftBarItem.classList.remove('active');
+    if (shouldActiveLeftBarItem) shouldActiveLeftBarItem.classList.add('active');
+  }
+
+  function showRightContentByActiveIndex(index) {
+    var realIndex = index + 1;
+    var activeRightContent = getRightContentWrap().querySelector('.activeRightContent');
+    var shouldShowRightContent = getRightContentWrap().querySelector('.rightContent_' + realIndex);
+    if (activeRightContent === shouldShowRightContent) return;
+    if (activeRightContent) {
+      activeRightContent.classList.remove('activeRightContent');
+    }
+    if (shouldShowRightContent) {
+      shouldShowRightContent.classList.add('activeRightContent');
+    }
+  }
+
+  // 设置当前展示的tab
+  window.setActiveIndex = function(index) {
+    try {
+      window.xpengBridge.setPageTitle(leftBarItemTitleArray[index]);
+    } catch (error) {
+      console.log(error);
+    }
+    setLeftBarItemActiveByIndex(index);
+    showRightContentByActiveIndex(index);
+    getRightContentWrap().scrollTop = 0;
+  }
+
+  // 点击了解更多
+  function onLearnMoreTouchStart(event) {
+    var index = parseInt(event.target.getAttribute('data-index'), 10) || 0;
+    try {
+      window.xpengBridge.jumpToUserBook(index, window.topic);
+    } catch (error) {
+      console.log(error);
+    }
+    event.preventDefault();
+    event.stopPropagation();
+  }
+  var learnMoreLinkArray = getRightContentWrap().querySelectorAll('.learnMoreText');
+  for (var j = 0; j < learnMoreLinkArray.length; j += 1) {
+    var learnMoreItem = learnMoreLinkArray[j];
+    learnMoreItem.addEventListener('touchstart', onLearnMoreTouchStart);
+  }
+
+</script>
+  <script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function() {
+  // 设置一定的延时供客户端设置变量
+  setTimeout(function() {
+    window.initPageFunction();
+  }, 200);
+});
+</script>
+  <script>
+
+  window.initPageFunction = function() {
+    var curTheme = window.xpengBridge?window.xpengBridge.getCurTheme():0
+    //var curTheme = 2
+    window.onThemeChange(curTheme);
+    window.initLeftBar();
+    var initIndex = parseInt(window.getLocationSearchDataByKey('initIndex'), 10) || window.showIndexArray[0];
+    // 了解更多事件
+    window.setActiveIndex(initIndex);
+    // 修改低配布局
+    window.initLow();
+    //window.setActiveIndex(1);
+  };
+</script>
+</body>
+</html>
